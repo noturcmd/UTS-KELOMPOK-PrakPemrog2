@@ -31,9 +31,9 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12"id="navbar-sticky">
-                    <x-nav-link href="/" :aktif="request() -> is('/')">Home</x-nav-link>
-                    <x-nav-link href="/datamahasiwa" :aktif="request() -> is('datamahasiwa')">Data Mahasiswa</x-nav-link>
-                    <x-nav-link href="/anggota" :aktif="request() -> is('anggota')">Anggota</x-nav-link>
+                    <x-nav-link href="/" :aktif="request()->is('/')">Home</x-nav-link>
+                    <x-nav-link href="/datamahasiwa" :aktif="request()->is('datamahasiwa')">Data Mahasiswa</x-nav-link>
+                    <x-nav-link href="/anggota" :aktif="request()->is('anggota')">Anggota</x-nav-link>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
@@ -64,9 +64,9 @@
                     <div class="mt-6 flow-root">
                         <div class="-my-6 divide-y divide-gray-500/10">
                             <div class="space-y-2 py-6">
-                                <x-nav-link href="/" :aktif="request() -> is('/')">Home</x-nav-link>
-                                <x-nav-link href="/datamahasiwa" :aktif="request() -> is('datamahasiwa')">Data Mahasiswa</x-nav-link>
-                                <x-nav-link href="/anggota" :aktif="request() -> is('anggota')">Anggota</x-nav-link>
+                                <x-nav-link href="/" :aktif="request()->is('/')">Home</x-nav-link>
+                                <x-nav-link href="/datamahasiwa" :aktif="request()->is('datamahasiwa')">Data Mahasiswa</x-nav-link>
+                                <x-nav-link href="/anggota" :aktif="request()->is('anggota')">Anggota</x-nav-link>
                             </div>
                             <div class="py-6">
                                 <a href="#"
@@ -95,7 +95,7 @@
                                 aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
-                {{$slot}}
+                {{ $slot }}
             </div>
             <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
                 aria-hidden="true">
