@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <p>hello world</p>
-</body>
-</html>
+<x-layout>
+  <x-slot:heading>
+      Halaman Mahasiswa
+  </x-slot:heading>
+
+  @if (!empty($pekerjaan))
+      <ul>
+          @foreach ($pekerjaan as $kerja)
+              <li>{{ ucfirst($kerja['judul']) }}</li>
+          @endforeach
+      </ul>
+  @else
+    <h1>Detail Mahasiswa</h1>
+  @endif
+</x-layout>

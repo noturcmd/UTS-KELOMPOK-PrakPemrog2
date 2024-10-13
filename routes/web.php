@@ -9,5 +9,3 @@ Route::get('/', function () {
 Route::get('/datamahasiswa', function () {
     return view('datamahasiswa');
 });
-
-
