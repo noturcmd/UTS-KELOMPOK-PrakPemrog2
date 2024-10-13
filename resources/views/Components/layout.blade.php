@@ -34,10 +34,6 @@
                     <x-nav-link href="/" :aktif="request() -> is('/')">Home</x-nav-link>
                     <x-nav-link href="/datamahasiwa" :aktif="request() -> is('datamahasiwa')">Data Mahasiswa</x-nav-link>
                     <x-nav-link href="/anggota" :aktif="request() -> is('anggota')">Anggota</x-nav-link>
-                    {{-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900  md:text-blue-700"
-                        aria-current="page">Home</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Data Mahasiswa</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Anggota</a> --}}
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
@@ -68,14 +64,9 @@
                     <div class="mt-6 flow-root">
                         <div class="-my-6 divide-y divide-gray-500/10">
                             <div class="space-y-2 py-6">
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                                <x-nav-link href="/" :aktif="request() -> is('/')">Home</x-nav-link>
+                                <x-nav-link href="/datamahasiwa" :aktif="request() -> is('datamahasiwa')">Data Mahasiswa</x-nav-link>
+                                <x-nav-link href="/anggota" :aktif="request() -> is('anggota')">Anggota</x-nav-link>
                             </div>
                             <div class="py-6">
                                 <a href="#"
