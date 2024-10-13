@@ -1,6 +1,6 @@
 <x-layout>
   <x-slot:heading>
-      Halaman Home
+      UTS Praktik Pemrograman 2
   </x-slot:heading>
 
   @if (!empty($pekerjaan))

@@ -95,6 +95,10 @@
                                 aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
+                <div class="flex justify-center mx-auto">
+                    <h1 class="text-6xl font-bold tracking-tight text-center">{{ $heading }}</h1>
+                </div>
+
                 {{ $slot }}
             </div>
             <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
