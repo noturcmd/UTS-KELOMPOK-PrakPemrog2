@@ -4,13 +4,13 @@
 
 @if ($type === 'a')
 <a
-    class="{{ $aktif ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium"
+    class="{{ $aktif ? 'text-red-700' : 'text-black-300 hover:text-gray-600' }} rounded-md px-3 py-2 text-sm font-medium"
     aria-current="{{ $aktif ? 'page' : 'false' }}" {{ $attributes }}>{{ $slot }}
 </a>
 
 @else
 <button
-    class="{{ $aktif ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium"
+    class="{{ $aktif ? 'text-red-700' : 'text-gray-300 hover:text-gray-600' }} rounded-md px-3 py-2 text-sm font-medium"
     aria-current="{{ $aktif ? 'page' : 'false' }}" {{ $attributes }}>{{ $slot }}
 </button>
 

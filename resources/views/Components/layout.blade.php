@@ -32,7 +32,7 @@
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12"id="navbar-sticky">
                     <x-nav-link href="/" :aktif="request()->is('/')">Home</x-nav-link>
-                    <x-nav-link href="/datamahasiswa" :aktif="request()->is('datamahasiwa')">Data Mahasiswa</x-nav-link>
+                    <x-nav-link href="/datamahasiswa" :aktif="request()->is('datamahasiswa')">Data Mahasiswa</x-nav-link>
                     <x-nav-link href="/anggota" :aktif="request()->is('anggota')">Anggota</x-nav-link>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
