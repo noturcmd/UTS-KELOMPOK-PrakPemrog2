@@ -10,6 +10,7 @@ class KodeAsalKota extends Model
     use HasFactory;
 
     protected $table = 'kode_asal_kotas';
+    protected $primaryKey = 'id';
     protected $fillable = ['kode_kota'];
 
     // Relasi dengan Mahasiswa

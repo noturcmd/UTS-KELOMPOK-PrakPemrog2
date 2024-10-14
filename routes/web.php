@@ -21,17 +21,17 @@ Route::get('/datamahasiswa', function () {
 
 Route::get('/datamahasiswa/{id}', function ($id) {
     $mhs  = Mahasiswa::find($id);
-    $asalKota  = AsalKota::find($id);
-    $kodeAsalKota  = KodeAsalKota::find($id);
 
     if (!$mhs) {
         abort(404);
     }
 
+    $mhs->load('asalKota', 'kodeAsalKota');
+
     return view("detail-mhs", [
         "anggota" => $mhs,
-        "asalkota" => $asalKota,
-        "kodeasalkota" => $kodeAsalKota
+        "asalkota" => $mhs->asalKota,
+        "kodeasalkota" => $mhs->kodeAsalKota
     ]);
 });
 
