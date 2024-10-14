@@ -7,7 +7,7 @@
         <ul>
             @foreach ($anggota as $mhs)
                 <a href="datamahasiswa/{{$mhs['id']}}" class="text-blue-600 hover:underline">
-                    <li><b>{{ $mhs->nama }}</li>
+                    <li>{{ $mhs->nama }}</li>
                 </a>
             @endforeach
         </ul>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\AsalKota;
+use App\Models\KodeAsalKota;
 use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 
@@ -19,12 +21,18 @@ Route::get('/datamahasiswa', function () {
 
 Route::get('/datamahasiswa/{id}', function ($id) {
     $mhs  = Mahasiswa::find($id);
+    $asalKota  = AsalKota::find($id);
+    $kodeAsalKota  = KodeAsalKota::find($id);
 
     if(!$mhs){
         abort(404);
     }
 
-    return view("detail-mhs", ["anggota" => $mhs]);
+    return view("detail-mhs", [
+        "anggota" => $mhs,
+        "asalkota" => $asalKota,
+        "kodeasalkota" => $kodeAsalKota
+    ]);
 });
 
 Route::get('/anggota', function () {
