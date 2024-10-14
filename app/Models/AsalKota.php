@@ -10,10 +10,7 @@ class AsalKota extends Model
 
     use HasFactory;
     protected $table = 'asal_kotas';
-    protected $fillable = ['asal_kota'];
+    protected $fillable = ['kota_asal'];
 
-    public function mahasiswas()
-    {
-        return $this->hasMany(Mahasiswa::class, 'asal_kota', 'asal_kota');
-    }
+
 }

@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('kota_asal');
+            $table->string('kode_kota');
             $table->timestamps();
         });
     }
