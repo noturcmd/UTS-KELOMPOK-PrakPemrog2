@@ -21,15 +21,6 @@ class MahasiswaFactory extends Factory
      */
     public function definition(): array
     {
-        // Generate nilai untuk asal_kota dan kode_asal_kota
-        $asalKotaValue = $this->faker->city();
-        $kodeAsalKotaValue = strtoupper($this->faker->lexify('??')); // Misalnya "AB", "CD"
-
-        // Simpan atau ambil data asal_kota
-        AsalKota::firstOrCreate(['kota_asal' => $asalKotaValue]);
-
-        // Simpan atau ambil data kode_asal_kota
-        KodeAsalKota::firstOrCreate(['kode_kota' => $kodeAsalKotaValue]);
 
         return [
             'nama' => $this->faker->name(),

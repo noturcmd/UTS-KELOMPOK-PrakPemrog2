@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kode_asal_kotas', function (Blueprint $table) {
-            $table->id()->unsignedBigInteger()->autoIncrement();
+            $table->id();
             $table->string('kode_kota');
             $table->timestamps();
         });
