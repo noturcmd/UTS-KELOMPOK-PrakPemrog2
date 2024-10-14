@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Mahasiswa; // Panggil model Mahasiswa
+use App\Models\Mahasiswa;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        Mahasiswa::factory()->count(10)->create(); // Buat 10 mahasiswa
+        Mahasiswa::factory(10)->create();
     }
 }
 
