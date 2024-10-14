@@ -26,15 +26,15 @@ class MahasiswaFactory extends Factory
         $kodeAsalKotaValue = strtoupper($this->faker->lexify('??')); // Misalnya "AB", "CD"
 
         // Simpan atau ambil data asal_kota
-        $asalKota = AsalKota::firstOrCreate(['kota_asal' => $asalKotaValue]);
+        AsalKota::firstOrCreate(['kota_asal' => $asalKotaValue]);
 
         // Simpan atau ambil data kode_asal_kota
-        $kodeAsalKota = KodeAsalKota::firstOrCreate(['kode_kota' => $kodeAsalKotaValue]);
+        KodeAsalKota::firstOrCreate(['kode_kota' => $kodeAsalKotaValue]);
 
         return [
             'nama' => $this->faker->name(),
-            'kota_asal' => $asalKotaValue,
-            'kode_kota' => $kodeAsalKotaValue,
+            'kota_asal' => AsalKota::where('kota_asal', $asalKotaValue)->first()->id,
+            'kode_kota' => KodeAsalKota::where('kode_kota', $kodeAsalKotaValue)->first()->id,
         ];
     }
 }

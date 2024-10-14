@@ -15,7 +15,7 @@ Route::get('/datamahasiswa', function () {
     if (!$mhs) {
         abort(404);
     }
-    
+
     return view("datamahasiswa", ["anggota" => $mhs]);
 });
 

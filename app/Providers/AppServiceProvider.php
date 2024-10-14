@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Providers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -17,8 +17,14 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
-    {
-        //
+
+
+public function boot()
+{
+    // Mengaktifkan foreign key constraint di SQLite
+    if (DB::getDriverName() === 'sqlite') {
+        DB::statement('PRAGMA foreign_keys=ON;');
     }
+}
+
 }
