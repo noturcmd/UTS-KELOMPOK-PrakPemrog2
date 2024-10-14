@@ -33,8 +33,8 @@ class MahasiswaFactory extends Factory
 
         return [
             'nama' => $this->faker->name(),
-            'kota_asal' => AsalKota::where('kota_asal', $asalKotaValue)->first()->id,
-            'kode_kota' => KodeAsalKota::where('kode_kota', $kodeAsalKotaValue)->first()->id,
+            'kota_asal' => AsalKota::factory(),
+            'kode_kota' => KodeAsalKota::factory(),
         ];
     }
 }

@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Asalkota>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\KodeAsalKota>
  */
-class AsalkotaFactory extends Factory
+class KodeAsalKotaFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class AsalkotaFactory extends Factory
     public function definition(): array
     {
         return [
-            'kota_asal' => $this->faker->city, // Menggunakan Faker untuk generate kota
+            'kode_kota' => strtoupper($this->faker->lexify('???')), // Mengenerate kode kota acak
         ];
     }
 }
