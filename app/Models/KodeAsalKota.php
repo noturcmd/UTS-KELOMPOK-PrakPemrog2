@@ -12,15 +12,8 @@ class KodeAsalKota extends Model
     protected $table = 'kode_asal_kotas';
     protected $fillable = ['kode_asal_kota'];
 
-    // Relasi dengan AsalKota
-    public function asalKota()
+    public function mahasiswas()
     {
-        return $this->belongsTo(AsalKota::class, 'asal_kota', 'asal_kota');
-    }
-
-    // Relasi dengan KodeAsalKota
-    public function kodeAsalKota()
-    {
-        return $this->belongsTo(KodeAsalKota::class, 'kode_asal_kota', 'kode_asal_kota');
+        return $this->hasMany(Mahasiswa::class, 'kode_asal_kota', 'kode_asal_kota');
     }
 }

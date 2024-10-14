@@ -12,7 +12,7 @@ Route::get('/', function () {
 Route::get('/datamahasiswa', function () {
     $mhs  = Mahasiswa::all();
 
-    if(!$mhs){
+    if (!$mhs) {
         abort(404);
     }
 
@@ -24,7 +24,7 @@ Route::get('/datamahasiswa/{id}', function ($id) {
     $asalKota  = AsalKota::find($id);
     $kodeAsalKota  = KodeAsalKota::find($id);
 
-    if(!$mhs){
+    if (!$mhs) {
         abort(404);
     }
 
@@ -36,5 +36,26 @@ Route::get('/datamahasiswa/{id}', function ($id) {
 });
 
 Route::get('/anggota', function () {
-
+    return view(
+        'anggota',
+        [
+            "daftaranggota" => [
+                [
+                    "id" => 1,
+                    "nim" => "K3522040",
+                    "nama" => "Lintang Mukti Nugroho"
+                ],
+                [
+                    "id" => 2,
+                    "nim" => "K3522068",
+                    "nama" => "Ridwanul Bakhri"
+                ],
+                [
+                    "id" => 3,
+                    "nim" => "K3522078",
+                    "nama" => "Septian Dwi Cahyo Nugroho"
+                ]
+            ]
+        ]
+    );
 });
