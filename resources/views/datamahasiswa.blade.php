@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        Halaman Mahasiswa
+        Daftar Mahasiswa
     </x-slot:heading>
 
     @if (!empty($anggota))
